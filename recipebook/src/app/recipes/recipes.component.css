@@ -1,0 +1,12 @@
+.btn {
+    padding: 2vh 2vw;
+    border-radius: 5px;
+    font-size: 2em;
+    background-color: orange;
+    border: 1px solid black;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: orangered;
+}

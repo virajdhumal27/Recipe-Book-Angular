@@ -1,0 +1,15 @@
+.nav-bar {
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh;
+    vertical-align: middle;
+}
+
+.nav-bar > h2 {
+    font-size: 3rem;
+}
+
+.nav-bar > h2:hover {
+    cursor: pointer;
+}
