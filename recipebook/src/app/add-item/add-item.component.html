@@ -1,0 +1,17 @@
+<div class="container">
+
+    <div class="recipe-table">
+        <h2>Add Recipe</h2>
+        <hr/>
+        <div class="recipe-title">
+            <input type="text" id="txtTitle" placeholder="Recipe Title Here!" [(ngModel)]="name">
+        </div>
+
+        <div class="recipe-ingrediants-input">
+            <label for="txtIngrediantsInput">Ingrediants</label>
+            <input type="text" id="txtIngrediantsInput" [(ngModel)]="ingrediants">
+        </div>
+
+        <button class="btn" (click)="addRecipe()">Add</button>
+    </div>
+</div>

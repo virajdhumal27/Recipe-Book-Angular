@@ -8,6 +8,8 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './recipe-item/recipe-item.component';
+import { AddItemComponent } from './add-item/add-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { RecipeItemComponent } from './recipe-item/recipe-item.component';
     RecipesComponent,
     ShoppingListComponent,
     RecipeListComponent,
-    RecipeItemComponent
+    RecipeItemComponent,
+    AddItemComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
