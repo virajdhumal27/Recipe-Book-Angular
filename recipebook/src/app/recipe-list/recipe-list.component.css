@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.recipe-table {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 3em;
+    padding: 4vh 0vw;
+    width: 100%;
+    text-align: center;
+}

@@ -1,13 +1,10 @@
 <div class="container">
-    <table class="recipe-table">
-        <tr>
-            <th>Recipe</th>
-            <th>IMG</th>
-        </tr>
 
-        <tr *ngFor="let recipe of recipes">
-            <td>{{recipe.name}}</td>
-            <td>{{recipe.image}}</td>
-        </tr>
-    </table>
+    <div class="recipe-table">
+        <h2>Recipes</h2>
+        <hr/>
+        <div *ngFor="let recipe of recipes">
+            <app-recipe-item [recipe]="recipe"></app-recipe-item>
+        </div>
+    </div>
 </div>

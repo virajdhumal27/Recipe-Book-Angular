@@ -1,18 +1,22 @@
 import { Injectable, OnInit } from '@angular/core';
 import { RECIPES } from './MockRecipes';
-import { RecipeItem } from './RecipeItem';
+import { RecipeModel } from './RecipeModel';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RecipeListService implements OnInit{
 
-  constructor() { }
+  recipes: RecipeModel[];
+
+  constructor() {
+    this.recipes = RECIPES;
+  }
 
   ngOnInit(): void {
   }
 
-  getRecipeList(): RecipeItem[] {
-    return RECIPES;
+  getRecipeList(): RecipeModel[] {
+    return this.recipes;
   }
 }

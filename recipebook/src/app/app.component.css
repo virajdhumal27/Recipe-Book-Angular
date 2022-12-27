@@ -2,3 +2,21 @@
     border: 2px solid black;
 }
 
+.btn {
+    padding: 2vh 2vw;
+    border-radius: 5px;
+    font-size: 2em;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(212, 212, 212);
+    color: black;
+}
+
+.btn:active {
+    background-color: black;
+    color: white;
+}

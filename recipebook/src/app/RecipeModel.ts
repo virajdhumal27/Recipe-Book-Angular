@@ -1,6 +1,6 @@
 import { RecipeIngrediants } from "./RecipeIngredients";
 
-export interface RecipeItem {
+export interface RecipeModel {
     id: number;
     name: string;
     ingrediants: RecipeIngrediants[];
