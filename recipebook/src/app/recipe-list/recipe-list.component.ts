@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecipeListService } from '../recipe-list.service';
 import { RecipeItem } from '../RecipeItem';
 
 @Component({
@@ -10,9 +11,10 @@ export class RecipeListComponent implements OnInit {
   
   recipes: RecipeItem[] = [];
   
-  constructor() {}
+  constructor(private recipeListService: RecipeListService) {}
 
   ngOnInit(): void {
+    this.recipes = this.recipeListService.getRecipeList();
   }
 
 }

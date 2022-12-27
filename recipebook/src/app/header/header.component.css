@@ -1,15 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Island+Moments&family=Oswald&family=Sevillana&display=swap');
+
 .nav-bar {
-    background-color: yellow;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
     padding: 3vh;
     vertical-align: middle;
+
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
-.nav-bar > h2 {
+.nav-bar>h2 {
     font-size: 3rem;
 }
 
-.nav-bar > h2:hover {
+.nav-bar>h2:hover {
     cursor: pointer;
+}
+
+h2 {
+    font-family: 'Caveat', cursive;
 }
