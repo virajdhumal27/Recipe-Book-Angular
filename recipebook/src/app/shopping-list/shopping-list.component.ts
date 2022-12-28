@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Item } from '../Item';
 
 @Component({
   selector: 'app-shopping-list',
@@ -6,7 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent {
-  handleClick():void {
-    console.log('Shopping List Clicked!');
+  items: Item[];
+
+  constructor() {
+    this.items = []
+  }
+
+  deleteItem(item: Item) {
+    console.log(item);
+    const index = this.items.indexOf(item);
+    this.items.splice(index, 1);
+  }
+
+  
+  addItem(item: Item): void {
+    console.log(item);
+    this.items.push(item);
   }
 }

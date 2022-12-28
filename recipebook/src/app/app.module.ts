@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
 import { ShoppingListItemsComponent } from './shopping-list-items/shopping-list-items.component';
 import { ShoppingListAddItemComponent } from './shopping-list-add-item/shopping-list-add-item.component';
+import { ShoppingListDisplayItemComponent } from './shopping-list-display-item/shopping-list-display-item.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ShoppingListAddItemComponent } from './shopping-list-add-item/shopping-
     AddItemComponent,
     RecipeDetailsComponent,
     ShoppingListItemsComponent,
-    ShoppingListAddItemComponent
+    ShoppingListAddItemComponent,
+    ShoppingListDisplayItemComponent
   ],
   imports: [
     BrowserModule,
