@@ -20,7 +20,6 @@ export class AddItemComponent implements OnInit {
   }
 
   addRecipe():void {
-    console.log(this.name);
     
     this.ingrediants = this.ingrediantsInput.split(',');
     console.log(this.ingrediants);
