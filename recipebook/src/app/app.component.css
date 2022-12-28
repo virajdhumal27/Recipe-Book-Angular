@@ -2,6 +2,10 @@
     border: 2px solid black;
 }
 
+.dashboard {
+    justify-content: center;
+}
+
 .btn {
     padding: 2vh 2vw;
     border-radius: 5px;

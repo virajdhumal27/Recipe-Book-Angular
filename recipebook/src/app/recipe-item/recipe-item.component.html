@@ -1,8 +1,8 @@
 <div class="container" *ngIf="recipe">
-    <div class="title-container">
+    <div class="title-container" routerLink="/recipe-details/{{recipe.id}}">
         <p>{{recipe.name}}</p>
     </div>
     <div class="img-container">
-        <img src='{{recipe.image}}' alt="SOUP" />
+        <img [src]="recipe.image" alt="SOUP" />
     </div>
 </div>

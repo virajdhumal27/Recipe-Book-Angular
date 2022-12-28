@@ -26,4 +26,18 @@ export class RecipeListService implements OnInit{
   getRecipeList(): RecipeModel[] {
     return this.recipes;
   }
+
+  getRecipe(id: number): RecipeModel {
+    for(let recipe of this.recipes) {
+      if (recipe.id == id) {
+        return recipe;
+      }
+    }
+
+    return this.recipes[0];
+  }
+
+  updateRecipe(id: number, recipe: RecipeModel): void {
+    this.recipes[id] = recipe;
+  }
 }

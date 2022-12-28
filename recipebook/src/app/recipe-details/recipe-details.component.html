@@ -1,0 +1,21 @@
+<div class="container">
+
+    <div class="recipe-table" *ngIf="recipe">
+        <h2>Recipe Detail</h2>
+        <hr/>
+        <div class="recipe-title">
+            <input type="text" id="txtTitle" placeholder="Recipe Title Here!" [value]="recipe.name">
+        </div>
+
+        <div class="recipe-ingrediants-input">
+            <label for="txtIngrediantsInput">Ingrediants</label>
+            <textarea id="txtIngrediantsInput" [value]="getIngrediants()"></textarea>
+
+            <label for="txtImageUrl">Image Url</label>
+            <input type="text" id="txtImageUrl" [value]="recipe.image">
+
+            <button class="btn" (click)="updateRecipe()">Add</button>
+        </div>
+
+    </div>
+</div>
