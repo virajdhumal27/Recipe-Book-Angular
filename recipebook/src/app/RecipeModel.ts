@@ -1,8 +1,8 @@
-import { RecipeIngrediants } from "./RecipeIngredients";
+// import { RecipeIngrediants } from "./RecipeIngredients";
 
 export interface RecipeModel {
     id: number;
     name: string;
-    ingrediants: RecipeIngrediants[];
+    ingrediants: string[];
     image: string;
 }

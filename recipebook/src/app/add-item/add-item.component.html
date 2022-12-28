@@ -9,9 +9,13 @@
 
         <div class="recipe-ingrediants-input">
             <label for="txtIngrediantsInput">Ingrediants</label>
-            <input type="text" id="txtIngrediantsInput" [(ngModel)]="ingrediants">
+            <textarea id="txtIngrediantsInput" [(ngModel)]="ingrediantsInput"></textarea>
+
+            <label for="txtImageUrl">Image Url</label>
+            <input type="text" id="txtImageUrl" [(ngModel)]="imageUrl">
+
+            <button class="btn" (click)="addRecipe()">Add</button>
         </div>
 
-        <button class="btn" (click)="addRecipe()">Add</button>
     </div>
 </div>
