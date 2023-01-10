@@ -38,6 +38,12 @@ export class RecipeListService implements OnInit{
   }
 
   updateRecipe(id: number, recipe: RecipeModel): void {
-    this.recipes[id] = recipe;
+
+    for (let i = 0; i < this.recipes.length; i++) {
+      if(this.recipes[i].id == id) {
+        console.log(this.recipes[i]);
+        this.recipes[i] = recipe;
+      }
+    }
   }
 }

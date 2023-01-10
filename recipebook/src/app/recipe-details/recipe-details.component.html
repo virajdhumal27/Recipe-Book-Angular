@@ -4,18 +4,18 @@
         <h2>Recipe Detail</h2>
         <hr/>
         <div class="recipe-title">
-            <input type="text" id="txtTitle" placeholder="Recipe Title Here!" [value]="recipe.name">
+            <input type="text" id="txtTitle" placeholder="Recipe Title Here!" [(ngModel)]="name">
         </div>
 
         <div class="recipe-ingrediants-input">
             <label for="txtIngrediantsInput">Ingrediants</label>
-            <textarea id="txtIngrediantsInput" [value]="getIngrediants()"></textarea>
+            <textarea id="txtIngrediantsInput" [(ngModel)]="ingrediantsInput"></textarea>
 
             <label for="txtImageUrl">Image Url</label>
-            <input type="text" id="txtImageUrl" [value]="recipe.image">
+            <input type="text" id="txtImageUrl" [(ngModel)]="imageUrl">
 
-            <button class="btn" (click)="updateRecipe()">Add</button>
+            <button class="btn" (click)="updateRecipe()" onclick="myFun()">Update</button>
         </div>
-
     </div>
+
 </div>

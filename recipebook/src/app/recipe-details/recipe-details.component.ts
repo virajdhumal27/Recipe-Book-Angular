@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RecipeListService } from '../recipe-list.service';
 import { RecipeModel } from '../RecipeModel';
@@ -11,7 +11,10 @@ import { RecipeModel } from '../RecipeModel';
 export class RecipeDetailsComponent implements OnInit {
 
   recipe!: RecipeModel;
-  ingrediantsInput: string = "";
+  @Input() ingrediantsInput!: string;
+  @Input() name!: string;
+  @Input() ingrediants!: string[];
+  @Input() imageUrl!: string;
   id!: number;
 
   constructor(
@@ -28,6 +31,10 @@ export class RecipeDetailsComponent implements OnInit {
   getRecipe(): void {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
     this.recipe = this.recipeListService.getRecipe(this.id);
+
+    this.name = this.recipe.name;
+    this.ingrediantsInput = this.getIngrediants();
+    this.imageUrl = this.recipe.image;
   }
 
   getIngrediants(): string {
@@ -35,8 +42,10 @@ export class RecipeDetailsComponent implements OnInit {
   }
 
   updateRecipe(): void {
+    console.log(this.ingrediantsInput);
     this.recipe.ingrediants = this.ingrediantsInput.split(',');
-
+    this.recipe.name = this.name;
+    this.recipe.image = this.imageUrl;
     this.recipeListService.updateRecipe(this.id, this.recipe);
   }
 
